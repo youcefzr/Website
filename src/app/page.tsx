@@ -17,7 +17,7 @@ const CONSTANTS = {
   discordMembers: 100000
 }
 
-function Home() {
+export default function Home() {
   return (
     <>
       <div className={css({
@@ -71,5 +71,3 @@ function Home() {
     </>
   );
 }
-
-export default React.memo(Home);
