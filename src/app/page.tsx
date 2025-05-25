@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { css } from "styled-system/css";
+import TypingText from "~/components/typing-text";
 import LatestReleaseButton from "~/components/latest-release-button";
 import NumberTicker from "~/components/number-ticker";
 import { Button } from "~/components/ui/button";
@@ -25,8 +26,8 @@ export default function Home() {
         maxWidth: "lg",
         marginX: "auto",
       })}>
-        <Heading size="5xl" maxWidth="md" textAlign="center" fontWeight="extrabold">
-          Forza Modding with a single click!
+        <Heading size="5xl" maxWidth="md" textAlign="center" fontWeight="extrabold" display="flex" justifyContent="center">
+          <TypingText text="Forza Modding with a single click!" />
         </Heading>
         <Text size="lg" className={css({ marginY: "10px", textAlign: { lgDown: "center" } })}>
           Forza Mods is a community enabling seamless modding and enhancements for an unparalleled Forza gaming experience.
