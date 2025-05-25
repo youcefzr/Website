@@ -1,7 +1,7 @@
 FROM node:20
 WORKDIR /app
 COPY package.json package-lock.json panda.config.ts ./
-RUN npm install
+RUN npm install --include=optional
 COPY . .
 RUN npm run build
 EXPOSE 3271
