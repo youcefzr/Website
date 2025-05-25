@@ -1,5 +1,8 @@
+'use client';
+
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import { css } from "styled-system/css";
 import TypingText from "~/components/common/TypingText";
 import LatestReleaseButton from "~/components/latest-release-button";
@@ -14,7 +17,7 @@ const CONSTANTS = {
   discordMembers: 100000
 }
 
-export default function Home() {
+function Home() {
   return (
     <>
       <div className={css({
@@ -68,3 +71,5 @@ export default function Home() {
     </>
   );
 }
+
+export default React.memo(Home);
