@@ -69,6 +69,13 @@ const RootLayout = (props: PropsWithChildren) => {
   return (
     <html suppressHydrationWarning lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
         <meta name="monetag" content="0c10671630e7080d7df33d9ef02ab8fe" />
       </head>
       <body
@@ -78,6 +85,7 @@ const RootLayout = (props: PropsWithChildren) => {
             display: "flex",
             flexDirection: "column",
             minHeight: "screen",
+            WebkitTapHighlightColor: "transparent",
           })
         }
       >
@@ -91,6 +99,9 @@ const RootLayout = (props: PropsWithChildren) => {
               lg: 24,
               "3xl": 48,
             },
+            width: "100%",
+            maxWidth: "100vw",
+            overflowX: "hidden",
           })}
         >
           {children}
