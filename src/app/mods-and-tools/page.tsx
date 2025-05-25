@@ -1,5 +1,6 @@
+'use client';
+
 import { ArrowDownToLine, ClipboardList } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
 
 import { css } from "styled-system/css";
@@ -11,22 +12,6 @@ import { Card } from "~/components/ui/card";
 import { Heading } from "~/components/ui/heading";
 import { IconButton } from "~/components/ui/icon-button";
 import { Text } from "~/components/ui/text";
-
-export const metadata: Metadata = {
-  title: "Mods & Tools",
-  description: "Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5. Explore a new dimension of customization and exhilarating gameplay with us.",
-  keywords: ["Forza Mods", "Forza Horizon 4 Mods", "Forza Horizon 5 Mods", "Forza Horizon Mods Download", "Forza Horizon 5 Custom Liveries", "Forza Horizon 4 Graphics Mods", "Forza Tuning Setups", "Forza Modding Tools", "Forza AIO Tool", "All in One Forza Mods AIO", "Forza Performance Enhancements", "Forza Car Mods", "Forza Horizon Texture Mods", "Forza Custom Cars", "Forza Modding Guide", "Forza Horizon Gameplay Mods", "Forza Modding Community", "Forza Visual Mods", "Forza Online Mods", "Free Forza Mods", "Forza Horizon Sound Mods", "Forza Community Mods", "Forza Horizon Open Source Tools", "Forza Horizon PC Mods", "Forza Graphics Enhancements"],
-  twitter: {
-    title: "Mods & Tools",
-    description: "Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5. Explore a new dimension of customization and exhilarating gameplay with us.",
-    images: []
-  },
-  openGraph: {
-    title: "Mods & Tools",
-    description: "Do you have any questions or issues about everything related to Forza Mods? You might find your answer here.",
-    images: []
-  },
-}
 
 export default function ModsAndTools() {
   return (

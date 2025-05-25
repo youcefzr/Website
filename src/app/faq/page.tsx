@@ -1,7 +1,6 @@
 'use client';
 
 import { CornerDownRight, HelpCircle } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -12,11 +11,6 @@ import { Heading } from "~/components/ui/heading";
 import { Text } from "~/components/ui/text";
 import { Accordion } from "~/components/ui/accordion";
 import { Alert } from "~/components/ui/alert";
-
-export const metadata: Metadata = {
-  title: "FAQ - Forza Mods",
-  description: "Frequently asked questions about Forza Mods.",
-};
 
 export default function FrequentlyAskedQuestions() {
   const questions: {
@@ -124,8 +118,9 @@ export default function FrequentlyAskedQuestions() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
+                key={index}
               >
-                <Accordion.Item key={index} value={category + index}>
+                <Accordion.Item value={category + index}>
                   <Accordion.ItemTrigger fontSize={15} className={css({ textDecoration: "underline", textDecorationThickness: 0.2 })}>
                     {entry.question}
                   </Accordion.ItemTrigger>
