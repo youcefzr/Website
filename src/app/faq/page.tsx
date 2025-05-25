@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
 
-import { Heading } from "@/components/ui/styled/heading";
-import { Text } from "@/components/ui/styled/text";
-import { Accordion } from "@/components/ui/styled/accordion";
-import { Alert } from "@/components/ui/styled/alert";
+import { Heading } from "~/components/ui/heading";
+import { Text } from "~/components/ui/text";
+import { Accordion } from "~/components/ui/accordion";
+import { Alert } from "~/components/ui/alert";
 
 export const metadata: Metadata = {
   title: "FAQ - Forza Mods",
