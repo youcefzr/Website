@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { css } from "styled-system/css";
-import TypingText from "~/components/typing-text";
+import TypingText from "~/components/common/TypingText";
 import LatestReleaseButton from "~/components/latest-release-button";
 import NumberTicker from "~/components/number-ticker";
 import { Button } from "~/components/ui/button";
