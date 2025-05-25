@@ -9,7 +9,7 @@ import { flex } from "styled-system/patterns";
 import { Heading } from "@/components/ui/typography/heading";
 import { Text } from "@/components/ui/typography/text";
 import { Accordion } from "@/components/ui/accordion";
-import { Alert } from "@/components/ui/alert";
+import { Alert } from "@/components/ui/styled/alert";
 
 export const metadata: Metadata = {
   title: "FAQ - Forza Mods",
