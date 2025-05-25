@@ -1,25 +1,31 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { css } from "styled-system/css";
 
 interface TypingTextProps {
   text: string;
+  delay?: number;
+  speed?: number;
 }
 
-export default function TypingText({ text }: TypingTextProps) {
+export default function TypingText({ text, delay = 0, speed = 50 }: TypingTextProps) {
   const [displayText, setDisplayText] = useState('');
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= text.length) {
-        setDisplayText(text.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
+    const timeout = setTimeout(() => {
+      if (currentIndex < text.length) {
+        setDisplayText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
       }
-    }, 100);
+    }, currentIndex === 0 ? delay : speed);
 
-    return () => clearInterval(interval);
-  }, [text]);
+    return () => clearTimeout(timeout);
+  }, [currentIndex, delay, speed, text]);
 
-  return <>{displayText}</>;
+  return (
+    <span className={css({ display: "inline" })}>
+      {displayText}
+      <span className={css({ opacity: currentIndex < text.length ? 1 : 0, animation: "blink 1s infinite" })}>|</span>
+    </span>
+  );
 }
