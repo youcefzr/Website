@@ -15,11 +15,11 @@ const CONSTANTS = {
   aioDownloads: 1423561,
   githubStars: 1067,
   discordMembers: 100000
-}
+};
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
+    <React.Fragment>
       <div className={css({
         marginTop: "20dvh",
         display: "flex",
@@ -68,6 +68,6 @@ export default function Home() {
           <Text>Discord members</Text>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }
